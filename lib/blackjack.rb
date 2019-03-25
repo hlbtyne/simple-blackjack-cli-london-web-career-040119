@@ -34,6 +34,9 @@ def hit?(card_total)
   user_input = get_user_input
   if user_input == "h"
     card_total += deal_card
+    if card_total > 21
+    end_game (card_total)
+    end
     return card_total
   else if user_input == "s"
     return user_input
@@ -53,7 +56,7 @@ end
 def runner
   welcome
   initial_round
-  if  
+  hit?
+  end
   
 end
-    
